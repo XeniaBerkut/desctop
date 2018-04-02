@@ -22,5 +22,17 @@ namespace addressbook_tests_autoit
         {
             return this.Name.Equals(other.Name);
         }
+
+        public override int GetHashCode()
+        {
+            //return 0;
+            return Name.GetHashCode();
+        }
+
+        public override string ToString()
+        {
+            return "name=" + Name;
+            //
+        }
     }
 }
